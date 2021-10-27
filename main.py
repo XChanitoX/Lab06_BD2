@@ -10,6 +10,13 @@ tokens = {}
 stoplist = []
 tokensArchivo = []
 
+def write_file(tokens):
+   f = open("index.txt",'w')
+   text=""
+   for token in tokens:
+     text = str(token)+":"+str(tokens[token])+'\n'
+   f.write(text)
+   f.close()
 
 def init():
   for archivo in libros:
